@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarioLlama3EnRaya.MainPage">
+
+    <!--Textos en pantalla-->
+    <VerticalStackLayout Padding="20">
+        <Label x:Name="lblEstado" 
+           Text="Turno: X"
+           FontSize="24"  />
+
+        <Label Text="Jugador X: " FontSize="18"/>
+        <Label x:Name="lblVictoriasX" Text="0" FontSize="18"/>
+        <Label Text="  |  " FontSize="18"/>
+        <Label Text="Jugador O: " FontSize="18"/>
+        <Label x:Name="lblVictoriasO" Text="0" FontSize="18"/>
+
+        <!-- Tablero del juego -->
+        <Grid Grid.Row="1" RowSpacing="5" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btn0" Grid.Row="0" Grid.Column="0" Clicked="Boton_Clicked"/>
+            <Button x:Name="btn1" Grid.Row="0" Grid.Column="1" Clicked="Boton_Clicked"/>
+            <Button x:Name="btn2" Grid.Row="0" Grid.Column="2" Clicked="Boton_Clicked"/>
+
+            <Button x:Name="btn3" Grid.Row="1" Grid.Column="0" Clicked="Boton_Clicked"/>
+            <Button x:Name="btn4" Grid.Row="1" Grid.Column="1" Clicked="Boton_Clicked"/>
+            <Button x:Name="btn5" Grid.Row="1" Grid.Column="2" Clicked="Boton_Clicked"/>
+
+            <Button x:Name="btn6" Grid.Row="2" Grid.Column="0" Clicked="Boton_Clicked"/>
+            <Button x:Name="btn7" Grid.Row="2" Grid.Column="1" Clicked="Boton_Clicked"/>
+            <Button x:Name="btn8" Grid.Row="2" Grid.Column="2" Clicked="Boton_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+
+</ContentPage>
